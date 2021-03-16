@@ -6,8 +6,8 @@ import joblib
 import time
 from drain3.drain import Drain
 from datetime import timedelta
-from genmat.database_methods import create_connection
 from multiprocessing import Process, Manager
+from genmat.code.database_methods import create_connection
 
 
 def genmat(cd, idx, di, labels, considered_container_names, tf, dd):
@@ -103,7 +103,6 @@ def cluster_visualizer(df: pd.DataFrame, tf: timedelta):
 
     manager = Manager()
     cd = manager.dict()
-    # cd = {idx: {label: {container_name: np.array for container_name in considered_container_names} for label in labels}
     #      for idx in dfs.keys()}
     print("beginning parallel section")
     job = [Process(target=genmat, args=(cd, i, dfs[i], labels, considered_container_names, tf, dd)) for i in dfs.keys()]
@@ -139,4 +138,3 @@ if __name__ == '__main__':
     start = time.time()
     main()
     print(f"Runtime: {time.time()-start}")
-

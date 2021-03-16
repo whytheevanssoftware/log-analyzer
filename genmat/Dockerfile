@@ -1,8 +1,6 @@
 # set base image (host OS)
 FROM python:3.9
 
-MAINTAINER Dalton Walker "s.d.walker6249@gmail.com"
-
 # copy the dependencies file to the working directory
 COPY requirements.txt requirements.txt
 

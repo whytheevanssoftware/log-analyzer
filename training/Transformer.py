@@ -6,7 +6,6 @@ import time
 
 training = bool(os.environ["TRAINING"])
 
-
 class Transformer(tf.keras.Model):
 
     def __init__(self,

@@ -1,9 +1,7 @@
 from Transformer import Transformer
 from MultiHeadAttention import MultiHeadAttention
 from tqdm import tqdm
-from Metrics import grad
 from Metrics import loss_function
-from Metrics import loss_function2
 from Metrics import accuracy_function
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
@@ -183,7 +181,6 @@ if __name__ == '__main__':
     n_logs = len(dataset.index)
     n_iter = n_logs // batch_size
     remainder = n_logs % batch_size
-    attns = []
 
     optimus_prime = Transformer(
         num_layers,

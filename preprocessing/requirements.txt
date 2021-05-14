@@ -8,4 +8,3 @@ tqdm
 # tensorflow-gpu
 matplotlib
 einops
-sentencepiece

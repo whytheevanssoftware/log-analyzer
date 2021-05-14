@@ -1,0 +1,26 @@
+embed_size: 512
+max_vocab_size: 2000
+buffer_size: 10000
+training: False
+    
+phraser:
+    min_count: 5
+    threshold: 7
+    load_model: True
+    save_model: False
+    
+clustering:
+    load_model: True
+    save_model: False
+    
+skipgram:
+    load_data: True
+    save_data: False
+    window_size: 2
+    num_neg_sampling: 10
+    
+w2v:
+    load_model: True
+    save_model: False
+    epochs: 50
+    batch_size: 2048

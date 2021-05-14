@@ -14,3 +14,4 @@ flask
 python-lsp-server[all]
 tensorflow
 Flask-Caching
+sentencepiece

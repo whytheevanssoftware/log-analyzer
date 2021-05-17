@@ -1,26 +1,30 @@
 embed_size: 512
 max_vocab_size: 2000
 buffer_size: 10000
-training: False
+global_training: True
     
 phraser:
     min_count: 5
     threshold: 7
-    load_model: True
-    save_model: False
+    load_model: False
+    save_model: True
+    training: False
     
 clustering:
-    load_model: True
-    save_model: False
+    load_model: False
+    save_model: True
+    training: False
     
 skipgram:
-    load_data: True
-    save_data: False
+    load_data: False
+    save_data: True
     window_size: 2
     num_neg_sampling: 10
+    training: False
     
 w2v:
-    load_model: True
-    save_model: False
+    load_model: False
+    save_model: True
     epochs: 50
     batch_size: 2048
+    training: True

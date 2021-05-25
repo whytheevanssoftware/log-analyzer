@@ -403,7 +403,7 @@ LABEL maintainer="Christoph Schranz <christoph.schranz@salzburgresearch.at>"
 # https://www.tensorflow.org/install/source#gpu
 # installation via conda leads to errors in version 4.8.2
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir "tensorflow" && \
+    pip install --no-cache-dir "tensorflow==2.4.1" && \
     pip install --no-cache-dir keras
 
 # Install PyTorch with dependencies
@@ -493,8 +493,6 @@ RUN mkdir $FONT_DIR/FiraCode/ && \
 
 COPY FiraCode-Retina.ttf $FONT_DIR/FiraCode
 
-COPY config/ /home/$NB_USER/.jupyter/
-
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'xeus-python' \
@@ -519,6 +517,9 @@ RUN conda install --quiet --yes \
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
+
+COPY config/ /home/$NB_USER/.jupyter/
+RUN jupyter lab build
 
 USER $NB_UID
 # Copy jupyter_notebook_config.json

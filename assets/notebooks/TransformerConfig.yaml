@@ -1,0 +1,11 @@
+TransformerGlobal:
+    d_model: 512
+    dff: 2048
+    max_seq_length: 200
+    
+BERTConfig:
+    attention_heads: 12
+
+PRIMEConfig:
+    attention_heads: 8
+    

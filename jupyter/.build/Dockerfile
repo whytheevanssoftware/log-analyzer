@@ -498,7 +498,7 @@ COPY config/ /home/$NB_USER/.jupyter/
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'xeus-python' \
-    'jupyterlab-lsp' \
+    # 'jupyterlab-lsp' \
     'jupyterlab-git' \
     'jupyterlab>=3.0' \
     'nodejs' \ 
@@ -510,9 +510,9 @@ RUN conda install --quiet --yes \
     'numpy' \
     'tensorboard' \
     'flask' \
-    'python-lsp-server[all]' \
+    # 'python-lsp-server[all]' \
     'sentencepiece' \
-    'pyyaml' && \
+    'pyyaml'=>5.4.1 && \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"

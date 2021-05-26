@@ -1,5 +1,6 @@
 drain3
-tensorflow-text
 gensim
 Flask-Caching
 tokenizers
+transformers
+jupyterthemes

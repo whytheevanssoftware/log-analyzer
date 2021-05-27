@@ -288,7 +288,6 @@ RUN conda install --quiet --yes \
     'jupyter-dash' \ 
     'tqdm' \
     'ipdb' \
-    'jax' \
     'numpy' \
     'tensorboard' \
     'flask' \

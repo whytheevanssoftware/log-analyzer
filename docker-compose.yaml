@@ -49,6 +49,7 @@ services:
               - gpu
               - utility
               - compute
+
     ports:
       - 8888:8888
     volumes:

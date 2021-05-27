@@ -14,20 +14,13 @@ COPY config/ /home/$NB_USER/.jupyter/
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'xeus-python' \
-    # 'jupyterlab-lsp' \
-    'jupyterlab-git' \
-    'jupyterlab>=3.0' \
-    'nodejs' \ 
-    'plotly>=4.5' \ 
     'jupyter-dash' \ 
     'tqdm' \
     'ipdb' \
-    'jax' \
     'numpy' \
     'tensorboard' \
     'flask' \
-    # 'python-lsp-server[all]' \
-    'sentencepiece' \
+    'pandas' \
     'pyyaml'=>5.4.1 && \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
@@ -35,7 +28,6 @@ RUN conda install --quiet --yes \
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-
-RUN jupyter lab build
+RUN jupyter labextension install jupyterlab-theme-solarized-dark
 
 USER $NB_UID

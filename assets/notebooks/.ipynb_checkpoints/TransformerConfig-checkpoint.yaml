@@ -1,8 +1,12 @@
 TransformerGlobalConfig:
-    d_model: 123
-    max_seq_length: 200
+    d_model: 512
+    max_seq_len: 200
     storage_path: '/results/'
     global_training: True
+    batch_size: 50
+    activation: 'relu'
+    epoch: 25
+    logdir: '/results/optimus_prime/'
     
 BERTLayerConfig:
     num_attention_heads: 8
@@ -23,3 +27,4 @@ HitAnomalyLayerConfig:
     load_model: False
     save_model: True
     training: True
+    

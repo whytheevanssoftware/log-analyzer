@@ -4,5 +4,4 @@ Flask-Caching
 tokenizers
 transformers
 sklearn
---upgrade jax jaxlib==0.1.67+cuda111 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 bertviz

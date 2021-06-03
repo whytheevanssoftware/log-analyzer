@@ -299,7 +299,11 @@ RUN conda install --quiet --yes \
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-RUN jupyter labextension install jupyterlab-theme-solarized-dark
+RUN jupyter labextension install jupyterlab-theme-solarized-dark \
+                                 jupyterlab-tailwind-theme \
+                                 jupyterlab-theme-hale \
+                                 jupyterlab_onedarkpro
+
 
 USER $NB_UID
 # Copy jupyter_notebook_config.json

@@ -1,0 +1,21 @@
+PreprocessingGlobalConfig:    
+    embed_size: 64
+    max_vocab_size: 2000
+    buffer_size: 10000
+    global_training: True
+    num_neg_sampling: 10
+    path: '/results/'
+    
+PhraserModelConfig:
+    min_count: 5
+    threshold: 7
+    load_model: False
+    save_model: True
+    training: False
+    model_name: 'phrase_model.joblib'
+    
+TextClusteringConfig:
+    load_model: True
+    save_model: False
+    training: False
+    model_name: 'template_miner.joblib'

@@ -41,17 +41,18 @@ services:
 
   jupyter:
     build: jupyter/.build/
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - capabilities:
-    #           - gpu
-    #           - utility
-    #           - compute
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+              - gpu
+              - utility
+              - compute
 
     ports:
       - 8888:8888
+      - 6006:6006
     volumes:
       - ./results:/home/jovyan/results
       - ./data:/home/jovyan/data

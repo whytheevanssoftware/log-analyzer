@@ -5,3 +5,4 @@ tokenizers
 transformers
 sklearn
 bertviz
+yaspin

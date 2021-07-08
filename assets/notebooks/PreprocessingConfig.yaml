@@ -1,6 +1,6 @@
 PreprocessingGlobalConfig:    
-    embed_size: 64
-    max_vocab_size: 2000
+    embed_size: 512
+    max_vocab_size: 2508
     buffer_size: 10000
     global_training: True
     num_neg_sampling: 10
@@ -15,7 +15,7 @@ PhraserModelConfig:
     model_name: 'phrase_model.joblib'
     
 TextClusteringConfig:
-    load_model: True
-    save_model: False
+    load_model: False
+    save_model: True
     training: False
     model_name: 'template_miner.joblib'

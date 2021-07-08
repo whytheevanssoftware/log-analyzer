@@ -45,10 +45,9 @@ services:
       resources:
         reservations:
           devices:
-            - capabilities:
-              - gpu
-              - utility
-              - compute
+          - driver: nvidia
+            count: 1
+            capabilities: [gpu, utility, compute]
 
     ports:
       - 8888:8888

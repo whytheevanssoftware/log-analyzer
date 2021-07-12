@@ -1,6 +1,6 @@
 PreprocessingGlobalConfig:    
-    embed_size: 512
-    max_vocab_size: 2508
+    embed_size: 768
+    max_vocab_size: 30522
     buffer_size: 10000
     global_training: True
     num_neg_sampling: 10

@@ -2,3 +2,6 @@
 	path = .build/docker-stacks
 	url = https://github.com/jupyter/docker-stacks.git
 	branch = master
+[submodule "assets/libs/transformers"]
+	path = assets/libs/transformers
+	url = https://github.com/aromans/transformers.git

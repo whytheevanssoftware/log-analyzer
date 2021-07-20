@@ -53,10 +53,6 @@ WordEmbeddingPreTrainingConfig:
     batch_size: 10
     max_seq_length: 300
     repeat_size: 5
-    
-    # Calculated during Runtime
-#     token_len: -1
-#     vocab_size: -1
         
     # State 
     load_model: True
